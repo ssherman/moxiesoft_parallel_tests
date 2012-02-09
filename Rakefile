@@ -7,11 +7,12 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name     = "parallel_tests"
+    gem.name     = "moxiesoft_parallel_tests"
     gem.summary  = "Run tests / specs / features in parallel"
     gem.email    = "grosser.michael@gmail.com"
-    gem.homepage = "http://github.com/grosser/#{gem.name}"
-    gem.authors  = "Michael Grosser"
+    gem.homepage = "http://github.com/ssherman/#{gem.name}"
+    gem.authors  = ['Michael Grosser', 'Eric DeBill']
+    gem.add_dependency "parallel"
   end
 
   Jeweler::GemcutterTasks.new

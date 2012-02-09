@@ -26,6 +26,9 @@ class ParallelTests
 
   # finds all tests and partitions them into groups
   def self.tests_in_groups(root, num_groups, options={})
+    if root.nil?
+      root = ['unit', 'functional', 'integration'].collect { |dir| File.join(Dir.pwd, 'test', dir) }
+    end
     tests = find_tests(root, options)
     if options[:no_sort] == true
       Grouper.in_groups(tests, num_groups)
@@ -43,9 +46,11 @@ class ParallelTests
 
   def self.execute_command(cmd, process_number, options)
     cmd = "TEST_ENV_NUMBER=#{test_env_number(process_number)} ; export TEST_ENV_NUMBER; #{cmd}"
+    print "starting #{cmd}"
     f = open("|#{cmd}", 'r')
     output = fetch_output(f, options)
     f.close
+    print "finished #{cmd}"
     {:stdout => output, :exit_status => $?.exitstatus}
   end
 
