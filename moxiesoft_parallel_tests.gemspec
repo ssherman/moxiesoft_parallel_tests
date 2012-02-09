@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
      "spec/parallel_tests_spec.rb",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/edebill-moxiesoft/moxiesoft_parallel_tests}
+  s.homepage = %q{http://github.com/ssherman/moxiesoft_parallel_tests}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
