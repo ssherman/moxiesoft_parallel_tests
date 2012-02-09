@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = %q{moxiesoft_parallel_tests}
-  s.version = "0.4.12"
+  s.version = "0.6.18"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Michael Grosser", "Erik DeBill", "Shane Sherman"]
+  s.authors = ["Michael Grosser", "Erik DeBill"]
   s.date = %q{2011-04-07}
   s.email = %q{grosser.michael@gmail.com}
   s.executables = ["parallel_cucumber", "parallel_spec", "parallel_test"]
